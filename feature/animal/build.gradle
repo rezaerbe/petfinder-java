@@ -1,0 +1,46 @@
+plugins {
+    id 'com.android.library'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs'
+}
+
+android {
+    namespace 'com.erbeandroid.petfinder.feature.animal'
+    compileSdk 32
+
+    defaultConfig {
+        minSdk 23
+        targetSdk 32
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation project(':core:data')
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    implementation 'androidx.fragment:fragment:1.5.3'
+
+    implementation 'androidx.navigation:navigation-fragment:2.5.2'
+    implementation 'androidx.navigation:navigation-ui:2.5.2'
+
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    implementation 'androidx.paging:paging-runtime:3.1.1'
+    implementation 'androidx.paging:paging-rxjava3:3.1.1'
+
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.5'
+
+    implementation 'com.uber.autodispose2:autodispose:2.1.1'
+    implementation 'com.uber.autodispose2:autodispose-androidx-lifecycle:2.1.1'
+
+    implementation 'com.google.dagger:hilt-android:2.43.2'
+    annotationProcessor 'com.google.dagger:hilt-android-compiler:2.43.2'
+}
